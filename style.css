@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+  font-family: Ubuntu;
+}
+
+p,
+h2,
+button {
+  color: white;
+  font-weight: bolder;
+  font-family: Ubuntu;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.6fr 3fr;
+  grid-template-rows: 1fr 4fr;
+  max-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-color: darkslateblue;
+}
+
+.dashboard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dash-logo {
+  width: 40px;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.side-items {
+  list-style: none;
+  max-height: 45px;
+}
+
+.side-items > a > img {
+  height: 18px;
+  width: 22px;
+}
+
+.side-items > a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+/* TOP BAR STUFF */
+.topbar {
+  background-color: white;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 9px darkgrey;
+  z-index: 2;
+}
+
+.topbar img {
+  height: 20px;
+  width: 20px;
+}
+
+.row-1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.search-bar {
+  width: 75%;
+  height: 30px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: lightgrey;
+  box-shadow: 0px 0px 5px grey;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.topbar .dp {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+
+.row-2 {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.info {
+  width: 60%;
+  display: flex;
+}
+.buttons {
+  width: 40%;
+  display: flex;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+button {
+  background-color: darkslateblue;
+  border-style: none;
+  border-radius: 20px;
+  padding: 8px 25px;
+  font-weight: bolder;
+  box-shadow: 0px 0px 5px blueviolet;
+}
+
+.userinfo p,
+.userinfo h2 {
+  color: black;
+  margin: 5px;
+  padding-left: 10px;
+}
+
+.info > .dp-large {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+/* Main */
+.main {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: grid;
+  background-color: lightgrey;
+  grid-template-columns: 2.5fr 1.2fr;
+  grid-template-rows: 1.5fr 1.5fr;
+  gap: 25px;
+  padding: 20px;
+}
+
+/* Projects */
+
+.projects {
+  margin-top: 20px;
+  position: relative;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  display: grid;
+  justify-content: center;
+  align-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+
+  gap: 20px;
+}
+
+.yourProjects {
+  position: absolute;
+  top: -35px;
+  color: black;
+}
+
+.card-info > h3 {
+  color: black;
+}
+
+.card-info > p {
+  color: darkgrey;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-left: solid orange 8px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px black;
+
+  padding: 10px;
+}
+.endIcons > img {
+  width: 20px;
+  height: 20px;
+  margin: 3px 10px;
+}
+
+/* Announcements */
+.announce h3 {
+  color: black;
+  font-size: 1rem;
+}
+.announce p {
+  color: darkgrey;
+  font-size: 0.9rem;
+}
+
+.announce {
+  background-color: white;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px black;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 50px 0;
+}
+.announce > h2 {
+  position: absolute;
+  color: black;
+  top: -65px;
+  align-self: flex-start;
+}
+
+.announce hr {
+  border: 1px solid dimgrey;
+  width: 95%;
+}
+
+.trending {
+  background-color: white;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  position: relative;
+}
+.trending > h2 {
+  position: absolute;
+  color: black;
+  top: -65px;
+  align-self: flex-start;
+}
+
+.trending img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.trend-items {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px;
+}
+
+.trend-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+}
+
+.trending h3 {
+  font-size: 1rem;
+  margin: 2px;
+}
+.trending p {
+  color: darkgray;
+  font-size: 0.8rem;
+  margin: 0;
+}
